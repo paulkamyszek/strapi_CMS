@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "isHomepage": {
+      "type": "boolean"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "integer"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "priorityOrder": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "PLN",
+        "EUR"
+      ]
+    },
+    "isPublished": {
+      "type": "boolean"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "categories": {
+      "model": "categories"
+    }
+  }
+}
